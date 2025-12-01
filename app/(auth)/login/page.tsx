@@ -43,7 +43,7 @@ export default function LoginPage() {
         if (error) {
             setError(error.message)
         } else {
-            setError('Check your email for the confirmation link!')
+            setError('Check your email for the bookiz confirmation link!')
         }
         setLoading(false)
     }

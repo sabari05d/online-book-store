@@ -76,21 +76,21 @@ export default async function BooksPage({
 
             {/* Main Content */}
             <div className="flex-1">
-                <div className="flex justify-between items-center mb-6">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
                     <h1 className="text-2xl font-bold">
                         {genreSlug
                             ? genres?.find((g) => g.slug === genreSlug)?.name || 'Books'
                             : 'All Books'}
                     </h1>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2">
                         <span className="text-sm text-muted-foreground">Sort by:</span>
-                        <div className="flex gap-2 text-sm">
+                        <div className="flex flex-wrap gap-2 text-sm">
                             <Link
                                 href={`/books?${new URLSearchParams({
                                     ...(genreSlug ? { genre: genreSlug } : {}),
                                     sort: 'newest',
                                 }).toString()}`}
-                                className={!sort || sort === 'newest' ? 'font-bold' : 'text-muted-foreground'}
+                                className={`px-3 py-1 rounded ${!sort || sort === 'newest' ? 'font-bold bg-primary/10' : 'text-muted-foreground hover:bg-accent'}`}
                             >
                                 Newest
                             </Link>
@@ -99,7 +99,7 @@ export default async function BooksPage({
                                     ...(genreSlug ? { genre: genreSlug } : {}),
                                     sort: 'price-asc',
                                 }).toString()}`}
-                                className={sort === 'price-asc' ? 'font-bold' : 'text-muted-foreground'}
+                                className={`px-3 py-1 rounded ${sort === 'price-asc' ? 'font-bold bg-primary/10' : 'text-muted-foreground hover:bg-accent'}`}
                             >
                                 Price: Low to High
                             </Link>
@@ -108,7 +108,7 @@ export default async function BooksPage({
                                     ...(genreSlug ? { genre: genreSlug } : {}),
                                     sort: 'price-desc',
                                 }).toString()}`}
-                                className={sort === 'price-desc' ? 'font-bold' : 'text-muted-foreground'}
+                                className={`px-3 py-1 rounded ${sort === 'price-desc' ? 'font-bold bg-primary/10' : 'text-muted-foreground hover:bg-accent'}`}
                             >
                                 Price: High to Low
                             </Link>

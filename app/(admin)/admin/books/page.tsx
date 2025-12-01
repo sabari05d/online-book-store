@@ -40,8 +40,8 @@ export default async function AdminBooksPage() {
                 </Link>
             </div>
 
-            <div className="border rounded-lg overflow-hidden">
-                <table className="w-full text-left text-sm">
+            <div className="border rounded-lg overflow-x-auto">
+                <table className="w-full text-left text-sm min-w-[640px]">
                     <thead className="bg-muted">
                         <tr>
                             <th className="p-4 font-medium">Cover</th>

@@ -29,23 +29,23 @@ export default async function GenresPage() {
 
             <div className="mb-8 p-4 border rounded-lg bg-card">
                 <h2 className="text-lg font-semibold mb-4">Add New Genre</h2>
-                <form action={addGenre} className="flex gap-4 items-end">
-                    <div>
+                <form action={addGenre} className="flex flex-col sm:flex-row gap-4 items-end">
+                    <div className="w-full sm:w-auto">
                         <label className="block text-sm font-medium mb-1">Name</label>
-                        <input name="name" required className="rounded-md border px-3 py-2" />
+                        <input name="name" required className="w-full rounded-md border px-3 py-2" />
                     </div>
-                    <div>
+                    <div className="w-full sm:w-auto">
                         <label className="block text-sm font-medium mb-1">Slug</label>
-                        <input name="slug" required className="rounded-md border px-3 py-2" />
+                        <input name="slug" required className="w-full rounded-md border px-3 py-2" />
                     </div>
-                    <button type="submit" className="rounded-md bg-primary px-4 py-2 text-primary-foreground">
+                    <button type="submit" className="w-full sm:w-auto rounded-md bg-primary px-4 py-2 text-primary-foreground">
                         Add Genre
                     </button>
                 </form>
             </div>
 
-            <div className="border rounded-lg overflow-hidden">
-                <table className="w-full text-left text-sm">
+            <div className="border rounded-lg overflow-x-auto">
+                <table className="w-full text-left text-sm min-w-[480px]">
                     <thead className="bg-muted">
                         <tr>
                             <th className="p-4 font-medium">Name</th>

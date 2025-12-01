@@ -15,10 +15,10 @@ export default async function Home() {
     <div className="space-y-12">
       <section className="text-center space-y-4 py-12 bg-muted/20 rounded-2xl">
         <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-          Welcome to BookStore
+          Welcome to bookiz
         </h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Discover your next favorite book from our curated collection of fiction, non-fiction, and more.
+          Discover your next favorite book from our curated collection at bookiz.
         </p>
         <div className="flex justify-center gap-4">
           <Link href="/books" className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90">

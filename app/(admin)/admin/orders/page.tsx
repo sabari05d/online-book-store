@@ -21,8 +21,8 @@ export default async function AdminOrdersPage() {
         <div>
             <h1 className="text-2xl font-bold mb-6">Manage Orders</h1>
 
-            <div className="border rounded-lg overflow-hidden">
-                <table className="w-full text-left text-sm">
+            <div className="border rounded-lg overflow-x-auto">
+                <table className="w-full text-left text-sm min-w-[768px]">
                     <thead className="bg-muted">
                         <tr>
                             <th className="p-4 font-medium">Order ID</th>
